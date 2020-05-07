@@ -72,6 +72,44 @@ SpCy JSONL: <https://github.com/tsantosh7/COVID-19-Named-Entity-Recognition/tree
 | recall-overall:             	| 0.92 	|
 | f1-measure-overall:         	| 0.91 	|
 
+## Using the model
+
+#### download SpaCy model: 
+<https://drive.google.com/open?id=1QoIeOAUZqaFLGrS-gJH1aAlE1_bn22ZI>
+
+
+#### install the model:
+``` bash
+pip install en_covido-0.0.0.tar.gz 
+```
+
+#### load the model:
+
+```bash
+import spacy
+import en_covido
+```
+
+#### perform NER
+
+```bash
+nlp = en_covido.load()
+
+doc = nlp("The coronavirus SPEC pandemic has become a growing public health concern worldwide, and there are insufficient epidemiological data on critical illness DISO . We sought to investigate the clinical course and features of critical patients with Corona Virus Disease 2019 DISO (COVID-19).")
+
+for ent in doc2.ents:
+    print(ent.label_, ent.text)
+```
+#### check results
+
+```
+SPEC coronavirus
+DISO critical illness
+DISO Corona Virus Disease 2019
+DISO COVID-19
+```
+
+
 
 ## Contributing
 Pull requests are welcome. 
