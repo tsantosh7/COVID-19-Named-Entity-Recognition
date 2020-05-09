@@ -13,7 +13,7 @@ The datasets are available in two formats IOB and Spacy's JSONL format.
 
 IOB : <https://github.com/tsantosh7/COVID-19-Named-Entity-Recognition/tree/master/Datasets/BIO>
 
-SpCy JSONL: <https://github.com/tsantosh7/COVID-19-Named-Entity-Recognition/tree/master/Datasets/SpaCy>
+SpaCy JSONL: <https://github.com/tsantosh7/COVID-19-Named-Entity-Recognition/tree/master/Datasets/SpaCy>
 
 ## Tutorials
 1. Convert_to_JSON_IOB.ipynb : Coverts David Campos's BRAT annotations format to IOB and SpaCy's JSONL format
@@ -95,7 +95,7 @@ import en_covido
 ```bash
 nlp = en_covido.load()
 
-doc = nlp("The coronavirus SPEC pandemic has become a growing public health concern worldwide, and there are insufficient epidemiological data on critical illness DISO . We sought to investigate the clinical course and features of critical patients with Corona Virus Disease 2019 DISO (COVID-19).")
+doc = nlp("The coronavirus pandemic has become a growing public health concern worldwide, and there are insufficient epidemiological data on critical illness. We sought to investigate the clinical course and features of critical patients with Corona Virus Disease 2019 (COVID-19).")
 
 for ent in doc2.ents:
     print(ent.label_, ent.text)
